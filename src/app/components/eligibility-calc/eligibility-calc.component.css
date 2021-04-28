@@ -1,0 +1,107 @@
+
+.eligible{
+    position: relative;
+}
+
+.big-circle{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    width: 50px;
+    height: 100px;
+    transform: matrix(0.12, -0.99, 0.99, 0.12, 0, 0);
+}
+
+
+.container{
+    float: right;
+    margin-right: 100px;
+    margin-top: -320px;
+}
+
+.eligibilityCalc{
+    display: inline-block;
+}
+.showEMI{
+    display: inline-block;
+    background-color: #663399;
+    top: -100px;
+    font-size: x-small;
+    color: white;
+    
+}
+
+.loanAMount{
+    padding: 30px 5px 5px;  
+    font-weight:lighter;
+}
+
+.yourEMI{
+    padding: 5px 5px 20px;
+}
+
+a.getMoney{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 24px;
+    background-color: white;
+    display: inline-block;
+    width: 65px;
+    height: 20px;
+}
+
+.getMoney:hover{
+
+    color: white;
+    background-color: #663399 ;
+}
+
+.eligibilityCalculator{
+    font-size: x-small;
+    width: 200px;
+}
+
+.mat-slider{
+    width: 190px;
+}
+
+.min{
+    text-align: left;
+}
+ 
+.max{
+    float: right;
+}
+
+.min-max{
+    padding: 2px  2px 5px 2px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+        display: none;
+}
+
+ .text-line {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:2px solid grey;
+    padding: 3px 10px;
+}
+
+.select{
+    border-style: none;
+}
+
+.tenure{
+border:0px;
+outline:0px;
+border-bottom:2px solid grey;
+width: 175px;
+}
+

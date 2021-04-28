@@ -1,0 +1,61 @@
+<div class="eligible">
+    <div class="big-circle">
+        <img class="circle" src="../../../assets/images/circle.png">
+    </div>-->
+    <div class="container">
+        <mat-card class="eligibilityCalc">
+            <h6>Eligibility Calculator</h6>
+            <mat-card-content>
+                <div class="eligibilityCalculator">
+                    <div class="monthlyIncome">
+                        <span>Monthly Income</span><br>
+                        <strong class="monthlyIncomeValue">{{monthlyIncome.value | currency: 'INR': 'symbol' :
+                            '1.0-0'}}</strong><br>
+                        <mat-slider #monthlyIncome (change)="updateSetting($event)" step="100" min="0" max="300000">
+                        </mat-slider>
+                        <div class="min-max">
+                            <span class="min">{{100000 | currency: 'INR': 'symbol' : '1.0-0'}}</span>
+                            <span class="max">{{300000 | currency: 'INR': 'symbol' : '1.0-0'}}</span>
+                        </div>
+                    </div>
+                    <div class="monthlyExpense">
+                        <span>Monthly Expense</span><br>
+                        <strong class="monthExpenseValue">{{monthlyExpense.value | currency: 'INR' : 'symbol' :
+                            '1.0-0'}}</strong><br>
+                        <mat-slider #monthlyExpense (change)="updateSetting($event)" step="15000" min="0" max="300000">
+                        </mat-slider>
+                    </div>
+                    <div class="repaymentTenure">
+                        <label for="repaymentTenure">Repayment Tenure</label><br>
+                        <select class="tenure">
+                            <option value="6months">6 Months</option>
+                            <option value="saab">12 Months</option>
+                            <option value="mercedes">18 Months</option>
+                        </select>
+                    </div>
+                    <div class="toggle">
+                        <span>Do you have any exisiting loan?</span>
+                        <mat-slide-toggle></mat-slide-toggle>
+                    </div>
+                    <div class="existingLoanEmi">
+                        <span>EMI of existing loan(optional)</span><br>
+                        <input type="number" class="text-line">
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="showEMI">
+            <div class="loanAMount">
+                <span>Loan Amount</span><br>
+                <span>{{100000 | currency: 'INR': 'symbol' : '1.0-0'}}</span><br>
+            </div>
+            <div class="yourEMI">
+                <span>Your EMI will be</span><br>
+                <span>{{15000 | currency: 'INR': 'symbol' : '1.0-0'}}</span><br>
+            </div>
+            <div>
+                <a href="#getMoney" class="getMoney">Get Money</a>
+            </div>
+        </mat-card>
+    </div>
+</div>
